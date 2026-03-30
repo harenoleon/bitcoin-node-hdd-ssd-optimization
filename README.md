@@ -147,12 +147,9 @@ https://github.com/Mirobit/bitcoin-node-manager
 ├── config/
 │   └── bitcoin.conf
 │   └── ckpool.conf
-├── scripts/
-│   ├── start.sh
-│   ├── stop.sh
-│   └── monitor.sh
 └── systemd/
     └── bitcoind.service
+    └── ckppol.service
 ```
 
 ---

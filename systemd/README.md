@@ -14,6 +14,40 @@ Using systemd allows:
 
 ---
 
+## 🔍 Locate Bitcoin Binary Path
+
+Before using this service, verify the path of Bitcoin Core binaries on your system:
+
+```bash
+which bitcoind
+which bitcoin-cli
+```
+
+If installed manually:
+```
+find /home/btc -name bitcoind
+```
+Example:
+```
+/home/btc/bitcoin-28.0/bin/bitcoind
+/home/btc/bitcoin-28.0/bin/bitcoin-cli
+```
+
+---
+
+## ⚙️ Service Configuration
+
+```ini
+ExecStart=/home/btc/bitcoin-28.0/bin/bitcoind \
+  -datadir=/data/bitcoin \
+  -conf=/data/bitcoin/bitcoin.conf
+
+ExecStop=/home/btc/bitcoin-28.0/bin/bitcoin-cli \
+  -datadir=/data/bitcoin stop
+```
+
+---
+
 ## 📂 Files
 
 * `bitcoind.service` → Bitcoin Full Node service

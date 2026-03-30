@@ -45,6 +45,7 @@ cd /home/btc
 git clone https://bitbucket.org/ckolivas/ckpool.git
 cd ckpool
 ```
+I get my ckpool path is home/btc/master/ from source.
 
 ---
 
@@ -60,13 +61,19 @@ make
 
 ## ⚙️ 4. Configure CKPool
 
-Create config file:
+CKPool requires a log directory to store runtime logs.
 
-```bash id="p2r3f1"
+Create the directory before running:
+```bash
+mkdir -p /home/btc/master/logs
+chown -R user:password /home/btc/master/logs
+```
+Create config file:
+```bash
 nano ckpool.conf
 ```
 
-Example:
+Example: `you can check my conf  at config folder`
 
 ```json id="u9v1xx"
 {

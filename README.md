@@ -93,17 +93,25 @@ bitcoin-cli getblockchaininfo
 
 ## 📊 Monitoring
 
-```bash
 # blockchain status
+```bash
 bitcoin-cli -datadir=/data/bitcoin getblockchaininfo
-
+```
 # live log
+```bash
 tail -f /data/bitcoin/debug.log
-
-# disk activity
-iostat -xm 5 | grep sda
 ```
 
+# disk activity
+```
+iostat -xm 5 | grep sda
+```
+# check disk size while syc
+```
+lsblk
+or
+df -h | grep (drivename)
+```
 ---
 
 ## 🌐 Peer Optimization

@@ -76,6 +76,18 @@ bitcoind -datadir=/data/bitcoin -daemon
 ```bash
 bitcoin-cli -datadir=/data/bitcoin stop
 ```
+---
+
+## 📊 Proof of Work
+
+- Bitcoin node running and syncing
+- CKPool connected via RPC
+- Disk I/O optimized (HDD + SSD)
+
+Example:
+
+```bash
+bitcoin-cli getblockchaininfo
 
 ---
 
@@ -131,8 +143,10 @@ https://github.com/Mirobit/bitcoin-node-manager
 ├── README.md
 ├── docs/
 │   └── setup.md
+│   └── ckpool-setup.md
 ├── config/
 │   └── bitcoin.conf
+│   └── ckpool.conf
 ├── scripts/
 │   ├── start.sh
 │   ├── stop.sh

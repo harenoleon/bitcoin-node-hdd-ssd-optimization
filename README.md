@@ -68,13 +68,13 @@ ln -s /home/btc/bitcoin_fast/indexes /data/bitcoin/indexes
 ### Start Node
 
 ```bash
-./scripts/start.sh
+bitcoind -datadir=/data/bitcoin -daemon
 ```
 
 ### Stop Node
 
 ```bash
-./scripts/stop.sh
+bitcoin-cli -datadir=/data/bitcoin stop
 ```
 
 ---

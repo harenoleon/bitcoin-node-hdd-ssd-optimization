@@ -1,0 +1,27 @@
+```ini
+[Unit]
+Description=Bitcoin Full Node
+After=network.target
+
+[Service]
+User=Yourusername
+Group=YourGoupname sometime is Username
+
+# Path to Bitcoin data get from find /home/btc -name bitcoin-cli 
+ExecStart=/usr/bin/bitcoind -datadir=/data/bitcoin 
+ExecStop=/usr/bin/bitcoin-cli -datadir=/data/bitcoin stop
+
+# Restart policy
+Restart=always
+RestartSec=10
+
+# File descriptor limit (important for many connections)
+LimitNOFILE=10000
+
+# Security hardening (basic)
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+```
